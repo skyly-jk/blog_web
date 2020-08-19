@@ -21,7 +21,16 @@
           </div>
         </div>
       </div>
-      <div class="info"></div>
+      <div class="info">
+        <div class="info-item">
+          <div class="info-title">
+
+          </div>
+          <div class="info-content my-userinfo">
+
+          </div>
+        </div>
+      </div>
     </div>
   </div>
 </template>

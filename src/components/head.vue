@@ -22,6 +22,9 @@
           实验室
         </a-menu-item>
       </a-menu>
+      <div class="user-info">
+        <a-button icon="edit" @click="$router.push({name:'editor'})">写博客</a-button>
+      </div>
     </div>
   </div>
 </template>
