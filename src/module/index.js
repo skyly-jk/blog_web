@@ -3,8 +3,8 @@ import Vuex from 'vuex'
 Vue.use(Vuex)
 
 const state={
-    categorys:['java','javascript'],
-    tags:['java','spring','web']
+    categorys:[],
+    tags:[]
 }
 const getters={
 
