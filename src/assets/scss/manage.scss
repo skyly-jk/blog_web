@@ -1,0 +1,33 @@
+.manage{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    margin-top: 1rem;
+    table{
+        width: 60%;
+        line-height: 3rem;
+        font-size: 16px;
+        background-color: #fafafa;
+        thead{
+            border-bottom: #222222 1px solid;
+            tr{
+                background-color: #F6F7FB;
+                th{
+                    padding-left: 1rem;
+                }
+            }
+        }
+        tbody{
+            tr{
+                border-bottom: #222222 1px solid;
+                &:hover{
+                    background-color: #EAEDF8;
+                }
+                td{
+                    padding-left: 1rem;
+                }
+            }
+        }
+    }
+}

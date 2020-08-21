@@ -3,16 +3,16 @@
     <div class="main">
       <div class="page">
         <div class="page-item" v-for="post in postList" :key="post.id">
-          <a class="page-title">{{post.title}}</a>
+          <a class="page-title" @click="$router.push('post/'+post.id)">{{post.title}}</a>
           <div class="page-info">
-            <p>作者 {{post.author}}</p>
-            <p>发表于 {{post.createDate}}</p>
-            <p>分类 {{post.categoryName}}</p>
-            <p>阅读量 {{post.readCount}}</p>
-            <p>评论数 0</p>
+            <p><i class="fa fa-user-o" aria-hidden="true"/>作者 {{post.author}}</p>
+            <p><i class="fa fa-clock-o" aria-hidden="true"/>发表于 {{post.createDate}}</p>
+            <p><i class="fa fa-folder-o" aria-hidden="true"/>分类 {{post.categoryName}}</p>
+            <p><i class="fa fa-eye" aria-hidden="true"/>阅读量 {{post.readCount}}</p>
+            <p><i class="fa fa-comment" aria-hidden="true"/>评论数 0</p>
           </div>
           <p class="page-content">
-            {{post.content}}
+            {{post.content | mdToStr}}
           </p>
           <div class="page-tags">
             <a class="tag" v-for="tag in post.tagNames.split(',')" :key="tag">

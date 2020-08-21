@@ -1,8 +1,33 @@
 .head{
     display: flex;
     flex-direction: row;
-    justify-content: center;
-    width: 70%;
+    justify-content: left;
+    width: 100%;
+    padding-left: 15%;
+    border-bottom: #e6e6e6 1px solid;
+    .home{
+        align-self: center;
+        color: black;
+        display: flex;
+        flex-direction: column;
+        margin-right: 20%;
+        .logo-before{
+            align-self: center;
+            height: 2px;
+            width: 4.5rem;
+            background-color: #222222;
+        }
+        .logo-after{
+            align-self: center;
+            height: 2px;
+            width: 4.5rem;
+            background-color: #222222;
+        }
+        .title{
+            font-size: 22px;
+            font-weight: bold;
+        }
+    }
     .ant-menu-item{
         &:hover{
             background-color: rgb(232, 232, 232);;
@@ -10,10 +35,5 @@
     }
     .ant-menu-item-selected{
 
-    }
-    .user-info{
-        position: absolute;
-        right: 10px;
-        top: 8px;
     }
 }
