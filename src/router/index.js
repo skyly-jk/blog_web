@@ -8,6 +8,9 @@ import post from "../components/public/post";
 
 import admin from "../components/admin/admin";
 import tagMan from "../components/admin/tagMan";
+import CategoryMan from "../components/admin/CategoryMan";
+import postMan from "../components/admin/postMan";
+
 const routes=[
     {
         path:"/",
@@ -42,7 +45,17 @@ const routes=[
                 path:"/admin/tag",
                 name:"tagMan",
                 component: tagMan,
-            }
+            },
+            {
+                path:"/admin/Category",
+                name:"categoryMan",
+                component: CategoryMan,
+            },
+            {
+                path:"/admin/postMan",
+                name:"postMan",
+                component: postMan,
+            },
         ]
     }
 ]
