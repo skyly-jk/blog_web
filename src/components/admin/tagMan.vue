@@ -8,11 +8,15 @@
         </tr>
       </thead>
       <tbody>
-        <tr v-for="tag in $store.state.tags" :key="tag.id">
+        <tr v-for="tag in tagList" :key="tag.id">
           <td>
             <edit-cell :text="tag.name"></edit-cell>
           </td>
-          <td></td>
+          <td>
+            <a-popconfirm title="是否删除？">
+              <a-button>删除</a-button>
+            </a-popconfirm>
+          </td>
         </tr>
       </tbody>
     </table>
@@ -26,7 +30,12 @@
         components: {EditCell},
         data(){
             return {
-                tagList:[]
+                tagList:[
+                    {
+                        id:1,
+                        name:"java"
+                    }
+                ]
             }
         },
         mounted() {
