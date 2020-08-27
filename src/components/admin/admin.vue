@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="admin">
     <Head :menu-list="menus"></Head>
     <router-view/>
   </div>
@@ -25,6 +25,8 @@
     }
 </script>
 
-<style scoped>
-
+<style scoped lang="scss">
+  .admin{
+    height: 90%;
+  }
 </style>

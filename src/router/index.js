@@ -17,11 +17,6 @@ const routes=[
         component:Index,
         children:[
             {
-                path:"/editor",
-                name:"editor",
-                component: editor
-            },
-            {
                 path: "/main",
                 name:"main",
                 redirect:'/'
@@ -55,6 +50,11 @@ const routes=[
                 path:"/admin/postMan",
                 name:"postMan",
                 component: postMan,
+            },
+            {
+                path:"/admin/editor",
+                name:"editor",
+                component: editor
             },
         ]
     }

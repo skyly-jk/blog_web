@@ -6,7 +6,7 @@ module.exports = {
         open: true, //自动打开浏览器
         proxy: {
             '/api': { //本地
-                target: 'http://localhost:8888',
+                target: 'http://localhost:8018',
             },
         }
     },
