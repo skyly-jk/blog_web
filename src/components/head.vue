@@ -1,6 +1,6 @@
 <template>
-    <div class="head">
-      <div class="home">
+    <div class="head" >
+      <div class="home" @click="switchModule">
         <span class="logo-before"></span>
         <span class="title">MR.YAN</span>
         <span class="logo-after"></span>
@@ -10,22 +10,6 @@
           <a-icon :type="menu.icon" :theme="menu.theme"/>
           {{menu.name}}
         </a-menu-item>
-<!--        <a-menu-item key="tag">-->
-<!--          <a-icon type="tags"/>-->
-<!--          标签-->
-<!--        </a-menu-item>-->
-<!--        <a-menu-item>-->
-<!--          <a-icon type="appstore" theme="filled"/>-->
-<!--          分类-->
-<!--        </a-menu-item>-->
-<!--        <a-menu-item>-->
-<!--          <a-icon type="database" theme="filled"/>-->
-<!--          归档-->
-<!--        </a-menu-item>-->
-<!--        <a-menu-item>-->
-<!--          <a-icon type="bank" theme="filled"/>-->
-<!--          实验室-->
-<!--        </a-menu-item>-->
       </a-menu>
     </div>
 </template>
@@ -41,6 +25,13 @@
         methods:{
             menu_select(item){
               this.$router.push({name:item.key})
+            },
+            switchModule(){
+                if(this.$router.currentRoute.path.match(/admin/g)){
+                    this.$router.push("/")
+                }else {
+                    this.$router.push("/admin")
+                }
             }
         }
     }

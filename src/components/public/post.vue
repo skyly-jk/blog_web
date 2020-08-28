@@ -72,12 +72,13 @@
         justify-content: center;
       }
       .article-title{
-        font-size: 25px;
+        font-size: 28px;
         font-weight: bold;
       }
       .article-bar{
         font-weight: lighter;
         font-size: 14px;
+        color: #999;
         .post-meta{
           padding-left: 5px;
           padding-right: 5px;

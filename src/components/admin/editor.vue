@@ -41,7 +41,7 @@
         },
         methods:{
             submit_post(){
-                let pureText=document.getElementsByClassName("v-note-show")[0].innerHTML
+                let pureText=document.getElementsByClassName("v-note-show")[0].innerText
                 pureText=pureText.replace(/\s*/g,"")
                 pureText=pureText.replace(/[\r\n]/g,"")
                 let _this=this;
@@ -56,8 +56,9 @@
                         pureText
                     }
                 ).then(res=>{
-                    if (res.data.status==0){
+                    if (res.data.status==1){
                         _this.$message.info("文章发布完成")
+                        _this.$router.push({name:"postMan"})
                     }
                 })
             },

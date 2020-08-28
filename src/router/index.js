@@ -3,13 +3,16 @@ import VueRouter from "vue-router";
 Vue.use(VueRouter)
 import Index from "../components/public/index"
 import main from "../components/public/main";
-import editor from "../components/admin/editor";
 import post from "../components/public/post";
+import tagView from "../components/public/tagView";
+import categoryView from "../components/public/categoryView";
+import archive from "../components/public/archive";
 
 import admin from "../components/admin/admin";
 import tagMan from "../components/admin/tagMan";
 import CategoryMan from "../components/admin/CategoryMan";
 import postMan from "../components/admin/postMan";
+import editor from "../components/admin/editor";
 
 const routes=[
     {
@@ -29,6 +32,21 @@ const routes=[
                 path: '/post/:id',
                 component: post,
                 props:true
+            },
+            {
+                path: '/tag',
+                name:"tag",
+                component: tagView,
+            },
+            {
+                path: '/category',
+                name:"category",
+                component: categoryView,
+            },
+            {
+                path: '/archive',
+                name:"archive",
+                component: archive,
             }
         ]
     },

@@ -9,38 +9,6 @@
         margin-right: 2rem;
         display: flex;
         flex-direction: column;
-        .page-item{
-            border: black 1px solid;
-            border-radius: 10px;
-            box-shadow: 1px 2px 12px rgba(0,0,0,0.1);
-            height: 200px;
-            margin: {
-                left: 2rem;
-                right: 2rem;
-                bottom: 2rem;
-            };
-            padding: 1rem;
-            display: flex;
-            flex-direction: column;
-            .page-title{
-                font-size: 20px;
-            }
-            .page-info{
-                display: flex;
-                flex-direction: row;
-                justify-content: start;
-                font-size: 13px;
-                p{
-                    padding-right: 10px;
-                }
-            }
-            .page-content{
-
-            }
-            .page-tags{
-
-            }
-        }
     }
     .info{
         flex: 2;
