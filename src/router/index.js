@@ -65,7 +65,7 @@ const routes=[
                 component: CategoryMan,
             },
             {
-                path:"/admin/postMan",
+                path:"/admin/articleMan",
                 name:"postMan",
                 component: postMan,
             },

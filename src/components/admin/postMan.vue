@@ -31,10 +31,10 @@
           <span v-else class="status status-draft">草稿</span>
         </td>
         <td>
-          <a class="td-info">{{post.pureText}}</a>
+          <a class="td-info" @click="editPost(post)">{{post.pureText}}</a>
         </td>
         <td>
-          <a-popconfirm title="是否删除？">
+          <a-popconfirm title="是否删除？" @confirm="deletePost(post.id)">
             <a-button>删除</a-button>
           </a-popconfirm>
         </td>
@@ -73,7 +73,20 @@
                 })
             },
             writePost(){
+                this.$store.state.article={}
                 this.$router.push({name:"editor"})
+            },
+            editPost(article){
+                this.$store.state.article=article
+                this.$router.push({name:"editor"})
+            },
+            deletePost(id){
+                let _this=this;
+                this.$axios.get("/api/post/deletePost", {params:{id}}).then(res=>{
+                    if (res.data.status){
+                        _this.getPost()
+                    }
+                })
             }
         },
         components: {EditCell},

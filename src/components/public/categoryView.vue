@@ -52,6 +52,11 @@
             },
             selectItem(id){
                 this.selectID=id
+                let config={}
+                if(id!=-1){
+                    config={categoryID:id}
+                }
+                this.getPost(config)
             }
         }
     }

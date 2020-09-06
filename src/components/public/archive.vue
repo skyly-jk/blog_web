@@ -6,7 +6,7 @@
           :class="{selected:selectIndex==index}"
           @click="selectItem(index)">
         <a-badge :count="archive.count">
-          <a-button>{{archive.date}}</a-button>
+          <a-button @click="getPost({archiveDate:archive.date})">{{archive.date}}</a-button>
         </a-badge>
       </li>
     </div>

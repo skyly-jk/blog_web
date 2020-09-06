@@ -4,7 +4,8 @@ Vue.use(Vuex)
 
 const state={
     categorys:[],
-    tags:[]
+    tags:[],
+    article:{}
 }
 const getters={
 
